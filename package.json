@@ -1,0 +1,20 @@
+{
+  "name": "hotwire-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.13.3",
+    "koa-route": "^3.2.0",
+    "koa-send": "^5.0.1",
+    "koa-static": "^5.0.0",
+    "swig": "^1.4.2"
+  }
+}

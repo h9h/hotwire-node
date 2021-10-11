@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotwire</title>
+    <script type="module" src="https://cdn.skypack.dev/pin/@hotwired/turbo@v7.0.1-CVP4GQw8Kdgbgi5Rlf1o/mode=imports/optimized/@hotwired/turbo.js"></script>
+</head>
+<body>
+
+<h1>Turbo Beispiel</h1>
+
+<turbo-frame id="page">
+    <table>
+        <tr>
+            <td><a href="/pageMessages" data-turbo-frame="page-slot">Nachrichten</a></td>
+            <td><a href="/pageHelp" data-turbo-frame="page-slot">Hilfe</a></td>
+        </tr>
+    </table>
+
+    <turbo-frame id="page-slot">
+        Hier kommt der Inhalt der jeweiligen pageXXX
+    </turbo-frame>
+
+</turbo-frame>
+
+</body>
+</html>
