@@ -1,8 +1,7 @@
 const {view} = require('./views')
 
-const getPage = page => async (ctx) => {
-	ctx.type = 'html'
-	ctx.body = await view(page, {})
+const getPage = page => async (req, res) => {
+	res.send(await view(page, {}))
 }
 
 module.exports = {
