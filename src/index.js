@@ -35,6 +35,23 @@ app.use(async function (ctx, next) {
 })
 
 // --------------------------------------------------------------
+// Integrating Stimulus
+// --------------------------------------------------------------
+const webpack = require("webpack")
+const webpackConfig = require("./webpack.config.js")
+const koaWebpack = require("koa-webpack")
+
+const compiler = webpack(webpackConfig)
+const middleware = koaWebpack({ compiler })
+/* app.use(async ctx => {
+	await ctx.use(middleware)
+}) */
+app.use(middleware)
+
+
+
+
+// --------------------------------------------------------------
 // Routes
 // --------------------------------------------------------------
 console.log('Defining routes')
