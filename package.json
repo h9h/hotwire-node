@@ -5,9 +5,9 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/server.js",
-    "build:css": "postcss public/stylesheets/tailwind.css",
+    "build:css": "postcss public/stylesheets/tailwind.css -o public/stylesheets/style.css",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js"
+    "dev": "yarn build:css && nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
