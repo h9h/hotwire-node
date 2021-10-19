@@ -1,4 +1,4 @@
-import { Controller } from "@hotwired/stimulus/dist/types/core/controller.d.ts";
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
     static targets = [ "button" ]
