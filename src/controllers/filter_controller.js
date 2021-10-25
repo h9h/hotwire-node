@@ -13,12 +13,12 @@ export default class extends Controller {
         this.openTab = currValue
 
         this.buttonTargets.forEach((element) => {
-            if (pareInt(element.getAttribute("value")) === this.openTab) {
+            if (element.getAttribute("value") === this.openTab.toString()) {
                 element.classList.remove('text-red-600')
                 element.classList.remove('bg-white')
                 element.classList.add('text-white')
                 element.classList.add('bg-red-600')
-            } else if (parseInt(element.getAttribute("value")) !== this.openTab) {
+            } else if (element.getAttribute("value") !== this.openTab) {
                 element.classList.remove('text-white')
                 element.classList.remove('bg-red-600')
                 element.classList.add('text-red-600')

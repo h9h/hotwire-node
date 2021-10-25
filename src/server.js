@@ -3,12 +3,14 @@ const webpeck = require("webpack");
 const webpackMiddleware = require("webpack-dev-middleware")
 const webpackConfig = require("./webpack.config")
 const path = require("path");
+const apiData = require("./backend")
 const app = express();
 
 
 // Logik
 const { messagesGetAll } = require('./messages')
-const { getPage } = require('./pages')
+const { getPage } = require('./pages');
+const { stringify } = require("postcss");
 
 // --------------------------------------------------------------
 // Static Files
@@ -53,3 +55,21 @@ app.listen(3000, (err) => {
     }
     console.log("Listening on port 3000");
 });
+
+/* apiData.refData(function(response) {
+    console.log(response.refs[0].ref);
+}) */
+
+const ref = apiData.refData(function (response) {
+    return (response.refs[0].ref);
+})
+
+console.log(ref);
+
+apiData.prismicData(function(response) {
+    console.log(response);
+})
+
+console.log("URL: " + apiData.fullUrl);
+console.log("ref: " + apiData.ref);
+
