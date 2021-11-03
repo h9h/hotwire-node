@@ -10,7 +10,7 @@ const app = express();
 // Logik
 const { messagesGetAll } = require('./messages')
 const { getPage } = require('./pages');
-const { stringify } = require("postcss");
+const { getRef } = require("./backend")
 
 // --------------------------------------------------------------
 // Static Files
@@ -40,6 +40,7 @@ const routes = {
     "/pageMessages": getPage("pageMessages.html"),
     "/pageHelp": getPage("pageHelp.html"),
     "/messages": messagesGetAll,
+    "/test" : getRef 
 }
 
 Object.entries(routes).forEach(([route, handler]) => app.use(route, handler));
@@ -60,7 +61,7 @@ app.listen(3000, (err) => {
     console.log(response.refs[0].ref);
 }) */
 
-const ref = apiData.refData(function (response) {
+/* const ref = apiData.refData(function (response) {
     return (response.refs[0].ref);
 })
 
@@ -73,3 +74,6 @@ apiData.prismicData(function(response) {
 console.log("URL: " + apiData.fullUrl);
 console.log("ref: " + apiData.ref);
 
+ */
+
+//apiData.getRef()
