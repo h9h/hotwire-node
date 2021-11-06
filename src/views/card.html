@@ -4,10 +4,10 @@
             <a href="">
                 <div class="flex items-center ml-3 mr-3">
                     <div class="max-w-sm overflow-hidden rounded shadow-lg">
-                        <img src="" alt="">
+                        <img src="{{item.data.image.url}}" alt="{{item.data.image.alt}}">
                         <div class="px-6 py-4">
                             <div class="flex items-center justify-between">
-                                <div class="mb-2 text-xl font-bold"></div>
+                                <div class="mb-2 text-xl font-bold">{{item.data.title[0].text}}</div>
                                 <div class="flex flex-row justify-between mb-2 text-xl">
                                     <div class="text-xl">{{item.data.amount[0].text}}</div>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -16,7 +16,7 @@
                                     </svg>
                                 </div>
                                 <div class="flex items-center justify-between">
-                                    <div class="h-6 text-xl"></div>
+                                    <div class="h-6 text-xl">{{item.data.time[0].text}}</div>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -24,10 +24,10 @@
                                 </div>
                             </div>
                         </div>
-                        <p class="text-base text-gray-700"></p>
+                        <p class="text-base text-gray-700">{{item.data.shortdescription[0].text}}</p>
                     </div>
                     <div class="px-6 pt-4 pb-2">
-                        <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full font"></span>
+                        <span class="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold text-gray-700 bg-gray-200 rounded-full font">{{item.data.filter[0].text}}</span>
                     </div>
                 </div>
             </a>

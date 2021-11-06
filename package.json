@@ -20,6 +20,7 @@
     "autoprefixer": "^10.3.7",
     "babel-loader": "^8.2.2",
     "express": "^4.17.1",
+    "node-fetch": "^2.0.0",
     "nodemon": "^2.0.13",
     "postcss": "^8.3.9",
     "postcss-cli": "^9.0.1",

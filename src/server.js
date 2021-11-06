@@ -10,7 +10,7 @@ const app = express();
 // Logik
 const { messagesGetAll } = require('./messages')
 const { getPage } = require('./pages');
-const { getRef } = require("./backend")
+const { loadAllCards, loadPhaseOne, loadPhaseTwo, loadPhaseThree, loadPhaseFour } = require('./methods')
 
 // --------------------------------------------------------------
 // Static Files
@@ -39,8 +39,13 @@ console.log('Defining routes')
 const routes = {
     "/pageMessages": getPage("pageMessages.html"),
     "/pageHelp": getPage("pageHelp.html"),
+    "/test": getPage("overview.html"),
     "/messages": messagesGetAll,
-    "/test" : getRef 
+    "/allCards": loadAllCards,
+    "/phase1": loadPhaseOne,
+    "/phase2": loadPhaseTwo,
+    "/phase3": loadPhaseThree,
+    "/phase4": loadPhaseFour
 }
 
 Object.entries(routes).forEach(([route, handler]) => app.use(route, handler));
@@ -76,4 +81,4 @@ console.log("ref: " + apiData.ref);
 
  */
 
-//apiData.getRef()
+apiData.getData()

@@ -5,8 +5,13 @@ export default class extends Controller {
     static values = { openTab: Number }
     
     initialize() {
+        
         this.openTab = 1
         this.showTab(this.openTab)
+
+        setTimeout(function(){
+            document.getElementById('init').click()
+        }, 1)
     }
 
     showTab(currValue) {
